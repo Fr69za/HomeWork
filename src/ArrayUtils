@@ -1,0 +1,20 @@
+public class TestGenMasRan {
+    public static void main(String[] args) {
+
+
+        int [] mas = ArrayUtils.GenMasRan(10,100);
+        System.out.print(mas  + ", ");
+
+    }
+}
+    
+public static int[] GenMasRan(int size, int range) {
+
+        int[] mas = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            int value = (int)(Math.random() * range);
+            mas[i] = value;
+        }
+        return mas;
+}    
