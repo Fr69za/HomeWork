@@ -1,0 +1,17 @@
+public class YourClassNameHere {
+	    public static void main(String[] args) {
+	     //Создать логическую матрицу по следующим критериям, 
+	     //если і равно j, то элементом будет true.
+	     int i = 4;
+	     int j = 4;
+	     
+	     boolean [][] logicMat = new boolean[i][j];
+	     for (i = 0; i < logicMat.length; i++){
+	       for (j = 0; j < logicMat[i].length; j++){ 
+	        if (i == j){
+	        logicMat[i][j] = true;
+	        }
+	       } 
+	     }
+	    } 
+	
