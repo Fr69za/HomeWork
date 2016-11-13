@@ -1,0 +1,42 @@
+package OOP.Week1;
+
+/**
+ * Created by Alexandr on 12.11.2016.
+ */
+public class SubArray {
+
+    public static void main(String[] args) {
+
+        int[] mas = {1, 2, 3, 6, 5, 4};
+        int start = 2;
+        int end = 4;
+        int[] expected = {3, 6, 5};
+        int[] res = subArray(mas, start, end);
+        boolean test = testArray(expected, res);
+        System.out.println(test);
+    }
+
+    public static boolean testArray(int[] expected, int[] res) {
+        if (expected == null || res == null) {
+            return false;
+        }
+        if (expected.length != res.length) {
+            return false;
+        }
+        for (int i = 0; i < res.length; i++) {
+            if (res[i] != expected[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int[] subArray(int[] mas, int start, int end) {
+        int[] res = new int[end - start + 1];
+        for (int i = start, j = 0; i <= end; j++, i++) {
+            res[j] = mas[i];
+        }
+        return res;
+    }
+
+}
